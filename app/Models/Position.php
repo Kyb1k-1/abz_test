@@ -46,12 +46,12 @@ class Position extends Model
     /**
      * Find by name.
      *
-     * @param $q
-     * @param $name
+     * @param Builder $q
+     * @param string  $name
      *
      * @return mixed
      */
-    public function scopeFindByName($q, $name) : Builder
+    public function scopeFindByName(Builder $q, string $name) : Builder
     {
         return $q->where('name', 'LIKE', "%$name%");
     }
