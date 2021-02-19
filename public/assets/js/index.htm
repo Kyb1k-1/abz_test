@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="jquery.maskedinput.js"></script>
+<script type="text/javascript">
+//маска записи. если телефон полностью заполнен  - становится зеленым
+//Пример создан на сайтом http://blogjquery.ru/maska-vvoda-telefona-i-drugix-polej-dlya-input-ov-v-jquery/
+jQuery(function($){
+   $("#date").mask("99.99.9999");
+   $("#phone").mask("(7999)-999-99-99",{completed : function(){$('#phone').css("border","1px solid green");}  });
+   $("#art").mask("goods-99999");
+});
+</script>
+</head>
+<body style="width: 1050px; margin: 0px auto; background: #F1EEEE; padding: 20px">
+<div style="    background: none repeat scroll 0 0 #FFFFFF; padding: 16px; min-width: 1000px; min-height: 600px; border-radius: 5px 5px 5px 5px; box-shadow: 1px 0 4px #777777;">
+
+Номер телефона: <input type="text" id="phone" value="Номер телефона" /><br>
+Дата рождения: &nbsp;<input type="text" id="date" value="Дата рождения" /><br>
+Артикул: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="art" value="Артикул" /><br><br>
+</div>
+</body>
+</html>
