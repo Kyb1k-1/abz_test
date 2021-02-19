@@ -61,7 +61,7 @@ class EmployeeController extends Controller
      */
     public function store(EmployeeRequest $request) : RedirectResponse
     {
-        $this->employeeService->store(...func_get_args());
+        $this->employeeService->store($request);
 
         return redirect()->route('employees.index')->with('status', trans('responses.success.store'));
     }
@@ -88,7 +88,7 @@ class EmployeeController extends Controller
      */
     public function update(EmployeeRequest $request, Employee $employee) : RedirectResponse
     {
-        $this->employeeService->update($request, $employee);
+        $this->employeeService->update(...func_get_args());
 
         return redirect()->route('employees.index')->with('status', trans('responses.success.update'));
     }
