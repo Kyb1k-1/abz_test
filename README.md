@@ -4,7 +4,24 @@
 
 This is a test assignment for a backend php developer position.
 
-## Local development
+## Application setup
+
+1. Copy .env and set settings.
+```bash
+cp .env.example .env
+```
+
+2. Install vendor
+```bash
+composer install
+```
+
+3. Generate application key
+```bash
+php artisan key:generate
+```
+
+## Using docker
 
 1. Runs docker in daemon mode
 ```bash
@@ -25,7 +42,7 @@ php artisan migrate
 
 2. Running all seeds
 ```shell
-php artisan db:seed --class=DatabaseSeeder
+php artisan db:seed
 ```
 
 3. Rewrite database and run seeds
