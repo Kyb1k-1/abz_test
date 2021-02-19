@@ -7,6 +7,6 @@ return [
         'destroy' => 'Record has been destroyed!',
     ],
     'fail' => [
-        'not_fount' => 'Record not found!',
+        'not_found' => 'Record not found!',
     ],
 ];

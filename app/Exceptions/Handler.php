@@ -42,7 +42,7 @@ class Handler extends ExceptionHandler
             if ($e->getStatusCode() === 404 && $request->route()->getName() && array_key_exists($request->route()->getName(), $routes)) {
                 return redirect()
                     ->to($routes[$request->route()->getName()])
-                    ->with('status', trans('responses.fail.not_fount'));
+                    ->with('status', trans('responses.fail.not_found'));
             }
         });
     }
