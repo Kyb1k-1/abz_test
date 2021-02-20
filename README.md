@@ -4,6 +4,11 @@
 
 This is a test assignment for a backend php developer position.
 
+Url                      | `http://138.68.83.52`
+------------------------ | ----------------------------------------
+Email                    | `admin@admin.ru`
+Password                 | `admin`
+
 ## Application setup
 
 1. Copy .env and set settings.
